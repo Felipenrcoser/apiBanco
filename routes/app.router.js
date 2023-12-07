@@ -1,12 +1,13 @@
 module.exports = app => {
     
-    const enderecosController = require("../controllers/enderecos.controller");
+    const empresaController = require("../controllers/empresas.controller");
+    const usuarioController = require("../controllers/usuario.controller");
+    
+
     const router = require("express").Router();
 
-    router.get('/enderecos', enderecosController.consultaEnderecos)
-    router.get('/enderecos/cidades', enderecosController.consultaCidades)
-    router.get('/enderecos/consulta-cep/:cep', enderecosController.consultaCEP)
-    router.post('/enderecos/consulta-cep', enderecosController.consultaCEP)
+    router.get('/empresas', empresaController.consultaEmpresa)
+    router.get('/usuarios', usuarioController.consultaUsuario)
 
     app.use('/api', router)
 }
