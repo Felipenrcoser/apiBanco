@@ -1,8 +1,8 @@
-const { UNIDADEMEDIDA } = require('../models/index');
+const { UNMEDIDA } = require('../models/index');
 
 exports.consultaUnidadeMedida = async (req, res, next) => {
   try {
-    const unidadesMedida = await UNIDADEMEDIDA.findAll({
+    const unidadesMedida = await UNMEDIDA.findAll({
       raw: true,
       attributes: ['unMedida', 'siglaUnidade', 'descUnidade'],
       order: [['unMedida', 'ASC']]
