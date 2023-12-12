@@ -5,7 +5,7 @@ exports.consultaProduto = async (req, res, next) => {
     const produtos = await PRODUTO.findAll({
       raw: true,
       attributes: ['idEmpresaRef', 'idProduto', 'descProduto', 'unMedidaRef'],
-      order: [['idEmpresaRef', 'ASC']]
+      order: [['idProduto', 'ASC']]
       // Add other options like order if needed
     });
 
