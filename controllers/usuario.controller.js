@@ -5,7 +5,7 @@ exports.consultaUsuario = async (req, res, next) => {
     try {
       const usuarios = await USUARIO.findAll({
         raw: true,
-         attributes: ['IDUSUARIO', 'NOMEUSUARIO'],
+         attributes: ['IDUSUARIO', 'NOMEUSUARIO','SENHAUSUARIO'],
         order: [['NOMEUSUARIO', 'ASC']]
       });
   
